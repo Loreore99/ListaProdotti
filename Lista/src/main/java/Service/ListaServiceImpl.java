@@ -17,5 +17,25 @@ public class ListaServiceImpl implements ListaService {
 	{
 		 listaRepository.delete(lista);
 	}
+	@Override
+	public Lista RinominaLista(Lista lista) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Lista CreaLista() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Lista AcquistaLista(Lista lista) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Lista MostraLista(Lista lista) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

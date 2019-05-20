@@ -27,6 +27,21 @@ public class ProdottoServiceImpl implements ProdottoService {
 	{
 		prodottoRepository.delete(prodotto);
 	}
+	@Override
+	public void InserisciProdLista(Prodotto prodotto, Lista lista) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void RimuoviProdLista(Prodotto prodotto, Lista lista) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void CancellaProd(Prodotto prodotto) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

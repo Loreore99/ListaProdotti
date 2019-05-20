@@ -1,5 +1,8 @@
 package Service;
+import javax.management.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import Entità.Utente;
 import Repository.UtenteRepository;
@@ -18,6 +21,27 @@ public class UtenteServiceImpl implements UtenteService{
 	public void CancellaUtente(Utente utente)
 	{
 		utenteRepository.delete(utente);
+	}
+	
+	@Override
+	public Float SaldoDisp(Utente utente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public boolean isAdmin(Utente utente) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public Utente Logout(Utente utente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public boolean Login(Utente utente) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
