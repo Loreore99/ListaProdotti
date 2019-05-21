@@ -21,11 +21,27 @@ public class Prodotto {
 	@Column(name="Acquistati")
 	private int acquistati;
 	
-	@ManyToOne
+	@ManyToMany
 	@JoinColumn(name="IdProdotto")
 	@Column(name="IdLista")
 	private int IdLista;
 	
+	public int getId_prodotto() {
+		return id_prodotto;
+	}
+
+	public void setId_prodotto(int id_prodotto) {
+		this.id_prodotto = id_prodotto;
+	}
+
+	public int getIdLista() {
+		return IdLista;
+	}
+
+	public void setIdLista(int idLista) {
+		IdLista = idLista;
+	}
+
 	public int getIdProdotto() {
 		return id_prodotto;
 	}

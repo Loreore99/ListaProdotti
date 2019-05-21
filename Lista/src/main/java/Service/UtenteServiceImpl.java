@@ -27,8 +27,7 @@ public class UtenteServiceImpl implements UtenteService{
 	}
 	@Override
 	public boolean isAdmin(Utente utente) {
-		// TODO Auto-generated method stub
-		return false;
+		return utente.isAdmin();
 	}
 	@Override
 	public Utente Logout(Utente utente) {
@@ -36,9 +35,16 @@ public class UtenteServiceImpl implements UtenteService{
 		return null;
 	}
 	@Override
-	public boolean Login(Utente utente) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean Login(Utente utente) 
+	{
+		if (((utente.getEmail())!=null)&&(utente.getPassword()!=null))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 }

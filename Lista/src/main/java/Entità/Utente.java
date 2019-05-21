@@ -18,10 +18,40 @@ public class Utente {
 	@Column(name="Email")
 	private String email;
 	
+	public String getPassword() {
+		return Password;
+	}
+
+	public void setPassword(String password) {
+		Password = password;
+	}
+
+	@Column(name="Password")
+	private String Password;
+	
 	@Column(name="Wallet")
 	private float wallet;
     
-	@ManyToOne
+	@Column
+	private boolean isAdmin;
+	
+	public int getId_utente() {
+		return id_utente;
+	}
+
+	public void setId_utente(int id_utente) {
+		this.id_utente = id_utente;
+	}
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
+	@OneToMany
 	@JoinColumn(name="IdUtente")
 	@Column(name="IdLista")
 	private int IdLista;

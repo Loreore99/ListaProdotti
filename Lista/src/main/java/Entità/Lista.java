@@ -19,15 +19,21 @@ public class Lista {
 	private int nProdotti;
 	
 	@Column(name="IdUtente")
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name="id_utente")
 	private int IdUtente;
 	
 	@Column(name="IdProdotto")
-	@OneToMany
+	@ManyToMany
 	@JoinColumn(name="id_prodotto")
 	private int IdProdotto;
 	
+	public int getId_lista() {
+		return id_lista;
+	}
+	public void setId_lista(int id_lista) {
+		this.id_lista = id_lista;
+	}
 	public int getnProdotti() {
 		return nProdotti;
 	}
