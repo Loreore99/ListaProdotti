@@ -1,11 +1,10 @@
 package Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import Entità.Prodotto;
-import Entità.Lista;
-import Repository.ProdottoRepository;
-import Repository.ListaRepository;
 import org.springframework.transaction.annotation.Transactional;
+import Entità.Lista;
+import Entità.Prodotto;
+import Repository.ProdottoRepository;
 @Transactional
 @Service("prodottoService")
 public class ProdottoServiceImpl implements ProdottoService {
@@ -39,7 +38,7 @@ public class ProdottoServiceImpl implements ProdottoService {
 	}
 	@Override
 	public void CancellaProd(Prodotto prodotto) {
-		// TODO Auto-generated method stub
+		prodottoRepository.delete(prodotto);
 		
 	}
 	

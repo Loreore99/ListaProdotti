@@ -21,6 +21,11 @@ public class Prodotto {
 	@Column(name="Acquistati")
 	private int acquistati;
 	
+	@ManyToOne
+	@JoinColumn(name="IdProdotto")
+	@Column(name="IdLista")
+	private int IdLista;
+	
 	public int getIdProdotto() {
 		return id_prodotto;
 	}

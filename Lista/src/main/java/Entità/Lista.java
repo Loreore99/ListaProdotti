@@ -18,6 +18,34 @@ public class Lista {
 	@Column(name="NProdotti")
 	private int nProdotti;
 	
+	@Column(name="IdUtente")
+	@OneToMany
+	@JoinColumn(name="id_utente")
+	private int IdUtente;
+	
+	@Column(name="IdProdotto")
+	@OneToMany
+	@JoinColumn(name="id_prodotto")
+	private int IdProdotto;
+	
+	public int getnProdotti() {
+		return nProdotti;
+	}
+	public void setnProdotti(int nProdotti) {
+		this.nProdotti = nProdotti;
+	}
+	public int getIdUtente() {
+		return IdUtente;
+	}
+	public void setIdUtente(int idUtente) {
+		IdUtente = idUtente;
+	}
+	public int getIdProdotto() {
+		return IdProdotto;
+	}
+	public void setIdProdotto(int idProdotto) {
+		IdProdotto = idProdotto;
+	}
 	public int getIdLista() {
 		return id_lista;
 	}

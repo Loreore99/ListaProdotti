@@ -20,6 +20,19 @@ public class Utente {
 	
 	@Column(name="Wallet")
 	private float wallet;
+    
+	@ManyToOne
+	@JoinColumn(name="IdUtente")
+	@Column(name="IdLista")
+	private int IdLista;
+	
+	public int getIdLista() {
+		return IdLista;
+	}
+
+	public void setIdLista(int idLista) {
+		IdLista = idLista;
+	}
 
 	public int getIdUtente() {
 		return id_utente;
