@@ -10,5 +10,6 @@
     <property name="connection.username">root</property>
     <property name="connection.password">1234</property>    
     <property name="show_sql">true</property>
+    <mapping resource="com/mycompany/Contact.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>   

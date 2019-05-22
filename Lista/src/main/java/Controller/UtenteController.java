@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import Entità.Utente;
 import Service.*;
 @Controller
-@RequestMapping("Utente")
+@RequestMapping("utente")
 public class UtenteController {
 	@Autowired
 	private UtenteService utenteService;
 	@RequestMapping(method = RequestMethod.GET)
 	public String Home(ModelMap modelMap) {
-		modelMap.put("Utente", new Utente());
+		modelMap.put("utente", new Utente());
 		return "ListaProdotti/home";
 	}
 	
