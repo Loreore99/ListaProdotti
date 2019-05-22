@@ -51,8 +51,6 @@ public class Utente {
 		this.isAdmin = isAdmin;
 	}
 
-	@OneToMany
-	@JoinColumn(name="IdUtente")
 	@Column(name="IdLista")
 	private int IdLista;
 	

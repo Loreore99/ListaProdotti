@@ -21,8 +21,6 @@ public class Prodotto {
 	@Column(name="Acquistati")
 	private int acquistati;
 	
-	@ManyToMany
-	@JoinColumn(name="IdProdotto")
 	@Column(name="IdLista")
 	private int IdLista;
 	

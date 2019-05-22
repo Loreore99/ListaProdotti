@@ -19,13 +19,9 @@ public class Lista {
 	private int nProdotti;
 	
 	@Column(name="IdUtente")
-	@ManyToOne
-	@JoinColumn(name="id_utente")
 	private int IdUtente;
 	
 	@Column(name="IdProdotto")
-	@ManyToMany
-	@JoinColumn(name="id_prodotto")
 	private int IdProdotto;
 	
 	public int getId_lista() {
