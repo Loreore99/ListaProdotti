@@ -18,9 +18,14 @@ public class UtenteController {
 		modelMap.put("utente", new Utente());
 		return "ListaProdotti/home";
 	}
-	@RequestMapping(value = "Home", method = RequestMethod.POST)
+	@RequestMapping(value = "Login", method = RequestMethod.POST)
 	public String Home(@ModelAttribute("utente") Utente utente) {
-		return "ListaProdotti/home";
+		return "ListaProdotti/Login";
+	}
+	@RequestMapping(value="Registrazione",method = RequestMethod.POST)
+	public String Registrazione(@ModelAttribute("utente") Utente utente)
+	{
+		return "ListaProdotti/Registrazione";
 	}
 	
 

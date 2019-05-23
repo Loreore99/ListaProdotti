@@ -15,19 +15,11 @@ public class Utente {
 	@Column(name="Cognome")
 	private String cognome;
 	
-	@Column(name="Email")
+	@Column(name="email")
 	private String email;
-	
-	public String getPassword() {
-		return Password;
-	}
 
-	public void setPassword(String password) {
-		Password = password;
-	}
-
-	@Column(name="Password")
-	private String Password;
+	@Column(name="password")
+	private String password;
 	
 	@Column(name="Wallet")
 	private float wallet;
@@ -35,6 +27,19 @@ public class Utente {
 	@Column
 	private boolean isAdmin;
 	
+	@Column(name="IdLista")
+	private int IdLista;
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String Password) {
+		password = Password;
+	}
+
+	
+
 	public int getId_utente() {
 		return id_utente;
 	}
@@ -51,8 +56,6 @@ public class Utente {
 		this.isAdmin = isAdmin;
 	}
 
-	@Column(name="IdLista")
-	private int IdLista;
 	
 	public int getIdLista() {
 		return IdLista;

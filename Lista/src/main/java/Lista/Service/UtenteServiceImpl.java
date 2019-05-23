@@ -37,7 +37,7 @@ public class UtenteServiceImpl implements UtenteService{
 	@Override
 	public boolean Login(Utente utente) 
 	{
-		if (((utente.getEmail())!=null)&&(utente.getPassword()!=null))
+		if (utenteRepository.findByEmailAndPassword(utente.getEmail(),utente.getPassword()) != null)
 		{
 			return true;
 		}
