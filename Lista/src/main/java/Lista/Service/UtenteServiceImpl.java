@@ -1,4 +1,6 @@
 package Lista.Service;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import Lista.Entità.Utente;
@@ -22,8 +24,8 @@ public class UtenteServiceImpl implements UtenteService{
 	
 	@Override
 	public Float SaldoDisp(Utente utente) {
-		// TODO Auto-generated method stub
 		return null;
+	
 	}
 	@Override
 	public boolean isAdmin(Utente utente) {

@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import Lista.Entità.Utente;
 import Lista.Service.*;
-@RestController
-@RequestMapping("utente")
+@Controller
+@RequestMapping("Utente")
 public class UtenteController {
 	@Autowired
 	private UtenteService utenteService;
 	@RequestMapping(method = RequestMethod.GET)
 	public String Home(ModelMap modelMap) {
-		modelMap.put("utente", new Utente());
+		modelMap.put("Utente", new Utente());
 		return "ListaProdotti/home";
 	}
 	@RequestMapping(value = "Login", method = RequestMethod.POST)
-	public String Home(@ModelAttribute("utente") Utente utente) {
+	public String Login(@ModelAttribute("Utente") Utente utente) {
 		return "ListaProdotti/Login";
 	}
 	@RequestMapping(value="Registrazione",method = RequestMethod.POST)
-	public String Registrazione(@ModelAttribute("utente") Utente utente)
+	public String Registrazione(@ModelAttribute("Utente") Utente utente)
 	{
 		return "ListaProdotti/Registrazione";
 	}
