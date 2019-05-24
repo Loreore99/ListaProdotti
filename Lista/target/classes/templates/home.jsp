@@ -16,7 +16,7 @@
 <input type="submit" value="Registrazione">
 <s:form method="post" modelAttribute="Utente"
 		action="${pageContext.request.contextPath }/Utente/Login">
-<h2>Hai già un account?</h2>
+<h2>Hai gia un account?</h2>
 <input type="submit" value="Login">
 </s:form>
 </body>

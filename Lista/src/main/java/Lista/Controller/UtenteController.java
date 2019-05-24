@@ -5,7 +5,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import Lista.Entità.Utente;
 import Lista.Service.*;
 @Controller
@@ -16,16 +15,16 @@ public class UtenteController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String Home(ModelMap modelMap) {
 		modelMap.put("Utente", new Utente());
-		return "ListaProdotti/home";
+		return "home";
 	}
 	@RequestMapping(value = "Login", method = RequestMethod.POST)
 	public String Login(@ModelAttribute("Utente") Utente utente) {
-		return "ListaProdotti/Login";
+		return "Login";
 	}
 	@RequestMapping(value="Registrazione",method = RequestMethod.POST)
 	public String Registrazione(@ModelAttribute("Utente") Utente utente)
 	{
-		return "ListaProdotti/Registrazione";
+		return "Registrazione";
 	}
 	
 
