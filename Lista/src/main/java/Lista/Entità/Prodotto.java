@@ -21,8 +21,8 @@ public class Prodotto {
 	@Column(name="Acquistati")
 	private int acquistati;
 	
-	@Column(name="IdLista")
-	private int IdLista;
+	@Column(name="Lista")
+	private Lista Lista;
 	
 	public int getId_prodotto() {
 		return id_prodotto;
@@ -32,18 +32,18 @@ public class Prodotto {
 		this.id_prodotto = id_prodotto;
 	}
 
-	public int getIdLista() {
-		return IdLista;
-	}
-
-	public void setIdLista(int idLista) {
-		IdLista = idLista;
-	}
-
 	public int getIdProdotto() {
 		return id_prodotto;
 	}
 	
+	public Lista getLista() {
+		return Lista;
+	}
+
+	public void setLista(Lista lista) {
+		Lista = lista;
+	}
+
 	public void setIdProdotto(int id_prodotto) {
 		this.id_prodotto = id_prodotto;
 	}

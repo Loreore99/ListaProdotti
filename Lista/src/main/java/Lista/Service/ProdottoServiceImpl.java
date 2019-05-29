@@ -12,7 +12,17 @@ public class ProdottoServiceImpl implements ProdottoService {
 	private ProdottoRepository prodottoRepository;
 	public int DisponibilitàProd(Prodotto prodotto)
 	{
-		return 0;
+		if((prodotto.getQuantità()-prodotto.getAcquistati())>0)
+		{
+			
+			return (prodotto.getQuantità()-prodotto.getAcquistati());
+		}
+		else
+		{
+			return 0;
+		}
+		
+		
 	}
 	public Prodotto NuovoProd(Prodotto prodotto)
 	{

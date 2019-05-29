@@ -1,5 +1,7 @@
 package Lista.Entità;
 
+import java.util.List;
+import Lista.Entità.Prodotto;
 import javax.persistence.*;
 
 @Entity
@@ -21,8 +23,8 @@ public class Lista {
 	@Column(name="IdUtente")
 	private int IdUtente;
 	
-	@Column(name="IdProdotto")
-	private int IdProdotto;
+	@Column(name="Prodotti")
+	private List<Prodotto> prodotti;
 	
 	public int getId_lista() {
 		return id_lista;
@@ -33,6 +35,12 @@ public class Lista {
 	public int getnProdotti() {
 		return nProdotti;
 	}
+	public List<Prodotto> getProdotti() {
+		return prodotti;
+	}
+	public void setProdotti(List<Prodotto> prodotti) {
+		this.prodotti = prodotti;
+	}
 	public void setnProdotti(int nProdotti) {
 		this.nProdotti = nProdotti;
 	}
@@ -41,12 +49,6 @@ public class Lista {
 	}
 	public void setIdUtente(int idUtente) {
 		IdUtente = idUtente;
-	}
-	public int getIdProdotto() {
-		return IdProdotto;
-	}
-	public void setIdProdotto(int idProdotto) {
-		IdProdotto = idProdotto;
 	}
 	public int getIdLista() {
 		return id_lista;
