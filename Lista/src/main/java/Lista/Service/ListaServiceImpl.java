@@ -1,4 +1,6 @@
 package Lista.Service;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import Lista.Entità.Lista;
@@ -18,9 +20,10 @@ public class ListaServiceImpl implements ListaService {
 		 listaRepository.delete(lista);
 	}
 	@Override
-	public Lista RinominaLista(Lista lista) {
-		// TODO Auto-generated method stub
-		return null;
+	public Lista RinominaLista(Lista lista,String nuovonome) {
+		return lista;
+		
+	
 	}
 	@Override
 	public Lista CreaLista() {
@@ -36,6 +39,12 @@ public class ListaServiceImpl implements ListaService {
 	public Lista MostraLista(Lista lista) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	public List<Lista> findByNome(String Nome)
+	{
+		return listaRepository.findByNome(Nome);
+	
+		
 	}
 
 }

@@ -17,11 +17,11 @@ public class UtenteController {
 		modelMap.put("Utente", new Utente());
 		return "home";
 	}
-	@RequestMapping(value = "Login", method = RequestMethod.POST)
+	@RequestMapping(value = "/Login", method = RequestMethod.POST)
 	public String Login(@ModelAttribute("Utente") Utente utente) {
 		return "Login";
 	}
-	@RequestMapping(value="Registrazione",method = RequestMethod.POST)
+	@RequestMapping(value="/Registrazione",method = RequestMethod.POST)
 	public String Registrazione(@ModelAttribute("Utente") Utente utente)
 	{
 		return "Registrazione";
