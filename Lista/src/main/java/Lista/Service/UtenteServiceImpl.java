@@ -12,7 +12,6 @@ public class UtenteServiceImpl implements UtenteService{
 	private UtenteRepository utenteRepository;
 	@Override 
 	public Utente Registrazione(Utente utente)
-	
 	{
 		return utenteRepository.save(utente);
 	}
@@ -20,17 +19,14 @@ public class UtenteServiceImpl implements UtenteService{
 	{
 		utenteRepository.delete(utente);
 	}
-	
 	@Override
 	public Float SaldoDisp(Utente utente) {
 		return null;
-	
 	}
 	@Override
 	public boolean isAdmin(Utente utente) {
 		return utente.isAdmin();
 	}
-
 	@Override
 	public boolean Login(Utente utente) 
 	{
@@ -43,5 +39,4 @@ public class UtenteServiceImpl implements UtenteService{
 			return false;
 		}
 	}
-
 }

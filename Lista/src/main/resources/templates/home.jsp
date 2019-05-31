@@ -6,7 +6,7 @@
 </head>
 <body>
 <s:form method="Post" modelAttribute="Utente"
-		action="${pageContext.request.contextPath }/Utente/Login">
+		action="${pageContext.request.contextPath}/Utente/Login">
 		<h1>Benvenuto Utente</h1>
 <h2>Hai gia un account?</h2>
  <input type="submit" value=Login>

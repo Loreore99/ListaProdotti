@@ -19,13 +19,11 @@ public class UtenteController {
 	}
 	@RequestMapping(value = "/Login", method = RequestMethod.POST)
 	public String Login(@ModelAttribute("Utente") Utente utente) {
-		return "Login";
+		return "redirect:Login";
 	}
 	@RequestMapping(value="/Registrazione",method = RequestMethod.POST)
 	public String Registrazione(@ModelAttribute("Utente") Utente utente)
 	{
-		return "Registrazione";
+		return "redirect:Registrazione";
 	}
-	
-
 }
