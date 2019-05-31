@@ -1,5 +1,4 @@
 package Lista.Service;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,11 +30,7 @@ public class UtenteServiceImpl implements UtenteService{
 	public boolean isAdmin(Utente utente) {
 		return utente.isAdmin();
 	}
-	@Override
-	public Utente Logout(Utente utente) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	@Override
 	public boolean Login(Utente utente) 
 	{

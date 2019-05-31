@@ -1,7 +1,5 @@
 package Lista.Entità;
 
-import java.util.List;
-import Lista.Entità.Lista;
 import javax.persistence.*;
 
 @Entity
@@ -29,8 +27,8 @@ public class Utente {
 	@Column
 	private boolean isAdmin;
 	
-	@Column(name="Liste")
-	private List<Lista> Liste;
+	@Column(name="IdLista")
+	private int IdLista;
 	
 	public String getPassword() {
 		return password;
@@ -98,11 +96,13 @@ public class Utente {
 		this.wallet = wallet;
 	}
 
-	public List<Lista> getListe() {
-		return Liste;
+	public int getIdLista() {
+		return IdLista;
 	}
 
-	public void setListe(List<Lista> liste) {
-		Liste = liste;
+	public void setIdLista(int idLista) {
+		IdLista = idLista;
 	}
+
+
 }

@@ -22,7 +22,7 @@ public class Prodotto {
 	private int acquistati;
 	
 	@Column(name="Lista")
-	private Lista Lista;
+	private String Lista;
 	
 	public int getId_prodotto() {
 		return id_prodotto;
@@ -36,11 +36,13 @@ public class Prodotto {
 		return id_prodotto;
 	}
 	
-	public Lista getLista() {
+
+
+	public String getLista() {
 		return Lista;
 	}
 
-	public void setLista(Lista lista) {
+	public void setLista(String lista) {
 		Lista = lista;
 	}
 
