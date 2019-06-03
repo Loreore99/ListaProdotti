@@ -5,17 +5,16 @@
 <title>HomePage</title>
 </head>
 <body>
-<s:form method="Post" modelAttribute="Utente"
-		action="${pageContext.request.contextPath}/Utente/Login">
+<form method="POST" modelAttribute="Utente"
+		action="/Utente/LoginPage">
 		<h1>Benvenuto Utente</h1>
 <h2>Hai gia un account?</h2>
- <input type="submit" value=Login>
-</s:form>
-<s:form method="Post" modelAttribute="Utente"
-		action="${pageContext.request.2contextPath }/Utente/Registrazione">
+ <input type="submit" value=LoginPage></form>
+<form method="POST" modelAttribute="Utente"
+		action="/Utente/RegistrazionePage">
 <h2>Non ti sei ancora iscritto?</h2>
- <input type="submit" value=Registrazione>
-</s:form>
+ <input type="submit" value=RegistrazionePage>
+</form>
 
 </body>
 </html>

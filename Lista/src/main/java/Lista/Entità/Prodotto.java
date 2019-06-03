@@ -1,7 +1,13 @@
 package Lista.Entità;
 
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.*;
 
+import org.hibernate.annotations.ManyToAny;
+
+import Lista.Entità.Lista;
 @Entity
 @Table(name="Prodotto")
 public class Prodotto {
@@ -21,8 +27,12 @@ public class Prodotto {
 	@Column(name="Acquistati")
 	private int acquistati;
 	
-	@Column(name="Lista")
-	private String Lista;
+	@ManyToMany
+	@JoinTable(name="Lista",
+	joinColumns= {@JoinColumn(name="id_lista")},
+	inverseJoinColumns= {@JoinColumn(name="id_prodotto")})
+	private Set<Prodotto> IdLista;
+	
 	
 	public int getId_prodotto() {
 		return id_prodotto;
@@ -38,12 +48,13 @@ public class Prodotto {
 	
 
 
-	public String getLista() {
-		return Lista;
+
+	public Set<Prodotto> getIdLista() {
+		return IdLista;
 	}
 
-	public void setLista(String lista) {
-		Lista = lista;
+	public void setIdLista(Set<Prodotto> idLista) {
+		IdLista = idLista;
 	}
 
 	public void setIdProdotto(int id_prodotto) {

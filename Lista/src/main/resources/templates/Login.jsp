@@ -1,28 +1,29 @@
-
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
 </head>
 <body>
-<s:form method="POST" modelAttribute="Utente"
-		action="${pageContext.request.contextPath }/Utente/Login">
+<form method="POST" modelAttribute="Utente">
 		<h1>Login</h1>
        <table>
 			<tr>
 				<td>Email</td>
 				<td>
-					<s:input path="Email"/>
+					<input type="text" th:field="*{Utente.Email}" />
 				</td>
 			</tr>
 			<tr>
 				<td>Password</td>
 				<td>
-					<s:input path="Password"/>
+					<input type="text" th:field="*{Utente.Password}" />
 				</td>
 			</tr>
+
 </table>
-</s:form>
+
+	<input type="submit" value="Login">
+	</form>
 </body>
 </html>

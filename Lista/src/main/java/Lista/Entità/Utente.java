@@ -1,5 +1,7 @@
 package Lista.Entità;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -24,11 +26,14 @@ public class Utente {
 	@Column(name="Wallet")
 	private float wallet;
     
-	@Column
+	@Column(name="isAdmin")
 	private boolean isAdmin;
 	
-	@Column(name="IdLista")
-	private int IdLista;
+	@ManyToMany
+	@JoinTable(name="Lista",
+	joinColumns= {@JoinColumn(name="id_lista")},
+	inverseJoinColumns= {@JoinColumn(name="IdUtente")})
+	private Set<Utente> IdLista;
 	
 	public String getPassword() {
 		return password;
@@ -96,13 +101,17 @@ public class Utente {
 		this.wallet = wallet;
 	}
 
-	public int getIdLista() {
+	public Set<Utente> getIdLista() {
 		return IdLista;
 	}
 
-	public void setIdLista(int idLista) {
+	public void setIdLista(Set<Utente> idLista) {
 		IdLista = idLista;
 	}
+
+
+
+
 
 
 }

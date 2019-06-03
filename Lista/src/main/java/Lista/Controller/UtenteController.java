@@ -17,13 +17,31 @@ public class UtenteController {
 		modelMap.put("Utente", new Utente());
 		return "home";
 	}
-	@RequestMapping(value = "/Login", method = RequestMethod.POST)
-	public String Login(@ModelAttribute("Utente") Utente utente) {
-		return "redirect:Login";
+	@RequestMapping(value = "LoginPage", method = RequestMethod.POST)
+	public String LoginPage(@ModelAttribute("Utente") Utente utente) {
+		return "Login";
 	}
-	@RequestMapping(value="/Registrazione",method = RequestMethod.POST)
+	@RequestMapping(value="RegistrazionePage",method = RequestMethod.POST)
+	public String RegistrazionePage(@ModelAttribute("Utente") Utente utente)
+	{
+		return "Registrazione";
+	}
+	@RequestMapping(value="Registrazione",method = RequestMethod.POST)
 	public String Registrazione(@ModelAttribute("Utente") Utente utente)
 	{
-		return "redirect:Registrazione";
+		utenteService.Registrazione(utente);
+		return "RegistrazioneSucc";
+	}
+	@RequestMapping(value="Login",method = RequestMethod.POST)
+	public String Login(@ModelAttribute("Utente") Utente utente)
+	{
+		if(utenteService.Login(utente)==true)
+		{
+		return "UserPage";
+		}
+		else
+		{
+			return "errorlogin";
+		}
 	}
 }

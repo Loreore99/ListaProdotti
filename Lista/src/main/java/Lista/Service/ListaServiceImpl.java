@@ -11,10 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class ListaServiceImpl implements ListaService {
 	@Autowired
 	private ListaRepository listaRepository;
-	public Lista CreaLista(Lista lista)
-	{
-		return listaRepository.save(lista);
-	}
 	public void EliminaLista(Lista lista)
 	{
 		 listaRepository.delete(lista);
@@ -26,9 +22,8 @@ public class ListaServiceImpl implements ListaService {
 	
 	}
 	@Override
-	public Lista CreaLista() {
-		// TODO Auto-generated method stub
-		return null;
+	public Lista CreaLista(Lista lista) {
+		return listaRepository.save(lista);
 	}
 	@Override
 	public Lista AcquistaLista(Lista lista) {
@@ -36,14 +31,12 @@ public class ListaServiceImpl implements ListaService {
 		return null;
 	}
 	@Override
-	public Lista MostraLista(Lista lista) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Lista> MostraLista(Lista lista) {
+		return listaRepository.findByNome(lista.getNome());
 	}
 	public List<Lista> findByNome(String Nome)
 	{
 		return listaRepository.findByNome(Nome);
-	
 		
 	}
 
