@@ -19,8 +19,6 @@ public class ListaServiceImpl implements ListaService {
 	@Override
 	public Lista RinominaLista(Lista lista,String nuovonome) {
 		return lista;
-		
-	
 	}
 	@Override
 	public Lista CreaLista(Lista lista) {

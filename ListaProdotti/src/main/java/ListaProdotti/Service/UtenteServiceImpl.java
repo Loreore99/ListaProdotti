@@ -12,9 +12,9 @@ public class UtenteServiceImpl implements UtenteService{
 	@Autowired
 	private UtenteRepository utenteRepository;
 	@Override 
-	public Utente Registrazione(Utente utente)
+	public void Registrazione(Utente utente)
 	{
-		return utenteRepository.save(utente);
+	 utenteRepository.save(utente);
 	}
 	public void CancellaUtente(Utente utente)
 	{
@@ -22,7 +22,7 @@ public class UtenteServiceImpl implements UtenteService{
 	}
 	@Override
 	public Float SaldoDisp(Utente utente) {
-		return null;
+		return utente.getWallet();
 	}
 	@Override
 	public boolean isAdmin(Utente utente) {

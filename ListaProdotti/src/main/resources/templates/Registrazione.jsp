@@ -11,27 +11,21 @@
 		<h1>Inserisci i tuoi dati</h1>
        <table>
 			<tr>
-			<td>Nome</td>
+			<td>Email</td>
 				<td>
-					<input path="Nome"/>
+					<input type="text" th:field="*{Utente.Email}" />
+				</td>
+			<td>Password</td>
+				<td>
+					<input type="text" th:field="*{Utente.Password}" />
+				</td>
+				<td>Nome</td>
+				<td>
+					<input type="text" th:field="*{Utente.Nome}" />
 				</td>
 				<td>Cognome</td>
 				<td>
-					<input path="Cognome"/>
-				</td>
-				<td>Email</td>
-				<td>
-					<input path="Email"/>
-				</td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td>
-				<tr>
-				<td>Password</td>
-				<td>
-				
-					<input path="Password"/>
+					<input type="text" th:field="*{Utente.Cognome}" />
 				</td>
 				<input type="submit" value="Registrazione">
 			</tr>

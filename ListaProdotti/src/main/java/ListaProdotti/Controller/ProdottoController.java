@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ListaProdotti.Service.ProdottoService;
 @Controller
-@RequestMapping("/Prodotto")
+@RequestMapping("Prodotto")
 public class ProdottoController {
 	@Autowired
 	private ProdottoService prodottoService;
