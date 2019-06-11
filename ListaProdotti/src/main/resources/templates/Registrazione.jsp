@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Registrazione</title>
 </head>
 <body>
-<form method="POST" modelAttribute="Utente"
+<form method="POST" ModelAttribute="Utente"
 		action="/Utente/ReistrazioneSucc">
 		<h1>Inserisci i tuoi dati</h1>
        <table>

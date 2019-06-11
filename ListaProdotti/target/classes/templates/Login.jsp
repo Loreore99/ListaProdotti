@@ -5,8 +5,7 @@
 <title>Login</title>
 </head>
 <body>
-<form method="POST" modelAttribute="Utente"
-action="UserPage">
+<form method="POST" modelAttribute="Utente"action="/Utente/Login">
 		<h1>Login</h1>
        <table>
 			<tr>
