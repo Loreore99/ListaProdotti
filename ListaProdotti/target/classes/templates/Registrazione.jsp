@@ -6,8 +6,8 @@
 <title>Registrazione</title>
 </head>
 <body>
-<form method="POST" ModelAttribute="Utente"
-		action="/Utente/ReistrazioneSucc">
+<form method="post" ModelAttribute="Utente"
+		action="@{Registrazione}">
 		<h1>Inserisci i tuoi dati</h1>
        <table>
 			<tr>

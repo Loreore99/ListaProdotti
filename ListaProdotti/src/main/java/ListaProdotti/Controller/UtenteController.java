@@ -40,7 +40,7 @@ public class UtenteController
 	}
 	
     //@RequestMapping(value="Login",method = RequestMethod.POST)
-    @PostMapping("/Login")
+	@PostMapping(path="Login")
 	public String Login(@ModelAttribute("Utente") Utente utente){
 		if(utenteService.Login(utente)==true)
 		{
